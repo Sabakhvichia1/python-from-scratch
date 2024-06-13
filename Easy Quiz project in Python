@@ -1,0 +1,43 @@
+print('Welcome to my quiz')
+
+playing = input("do you want to participate? ")
+
+if playing.lower() != "yes":
+    quit()
+
+print("okay, let's play ")
+
+score = 0
+
+answer = input('what is Python? ')
+if answer == "a programming language":
+    print('good job')
+    score += 1
+else:
+    print('incorrect')
+
+
+answer = input('what is python mostly used for? ')
+if answer == "for managing data":
+    print('good job')
+    score += 1
+else:
+    print('incorrect')
+
+answer = input('why is python good to learn? ')
+if answer == "it has a variety of realms which can be operated by python":
+    print('good job')
+    score += 1
+else:
+    print('incorrect')
+
+
+answer = input('why is python easy to learn as a begginer? ')
+if answer == "because of its syntax":
+    print('good job')
+    score += 1
+else:
+    print('incorrect')
+
+
+print(f"good job, you got {score} correct answers")    
