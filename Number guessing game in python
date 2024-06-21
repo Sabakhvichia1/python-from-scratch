@@ -1,0 +1,39 @@
+import random
+
+hello = input('welcome to my number guessing game, would you like to participate? ')
+
+if hello.lower() == "yes":
+    top_of_range = input("type a number: ")
+else:
+    print("that is sad to hear")
+
+if top_of_range.isdigit():
+    top_of_range = int(top_of_range)
+    
+    if top_of_range <= 0:
+        print("please enter a number greater than 0 ")
+        quit()
+else:
+    print("insert a NUMBER please")
+
+
+random_number = random.randint(0, top_of_range)
+guesses = 0
+while True:
+    guesses += 1
+    user_guess = input("make a guess: ")
+
+    if user_guess.isdigit():
+        user_guess = int(user_guess)
+    
+    else:
+        print("insert a NUMBER please")
+        continue
+
+    if user_guess == random_number:
+        print("you got it")
+        break
+    else:
+        print("we will get them next time")
+        
+print("ye got it in", guesses, "guesses")
